@@ -8,8 +8,8 @@ public class matrix{
 		Scanner s=new Scanner(System.in);
 		System.out.println("Enter the size of the 1st matrixes");
 		int a=s.nextInt();
-		System.out.println("Enter the size of the 2nd matrixes");
 		int b=s.nextInt();
+		System.out.println("Enter the size of the 2nd matrixes");
 		System.out.println("Enter the elements in first matrix");
 		for(int i=0;i<a;i++){
 			for(int j=0;j<b;j++){
