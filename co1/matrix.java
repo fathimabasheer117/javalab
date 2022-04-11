@@ -10,6 +10,8 @@ public class matrix{
 		int a=s.nextInt();
 		int b=s.nextInt();
 		System.out.println("Enter the size of the 2nd matrixes");
+		int c=s.nextInt();
+		int d=s.nextInt();
 		System.out.println("Enter the elements in first matrix");
 		for(int i=0;i<a;i++){
 			for(int j=0;j<b;j++){
@@ -19,8 +21,8 @@ public class matrix{
 		
 		int arr2[][]=new int[5][5];
 		System.out.println("Enter the elements in the second matrix");
-		for(int i=0;i<a;i++){	
-			for(int j=0;j<b;j++){
+		for(int i=0;i<c;i++){	
+			for(int j=0;j<d;j++){
 				arr2[i][j]=s.nextInt();
 			}
 		}
