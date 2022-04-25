@@ -1,45 +1,45 @@
-import java.util.Scanner;
+package fathima;
 
-public class Employee {
-	int eno,esalary;
-	String ename;
-	Employee(int i,String j,int k){
-		eno=i;
-		ename=j;
-		esalary=k;
+import java.util.*;
+
+public class employee {
+	int eno,eSalary;
+	String eName;
+	employee(int no,String name,int sal){
+		eno = no;
+		eName = name;
+		eSalary = sal;
 	}
-	
-	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);
-		System.out.println("Enter the number of employees");
-		int n=s.nextInt();
-		s.nextLine();
-		Employee emp[]=new Employee[n];
+	public static void main(String args[]){
+		Scanner in = new Scanner(System.in);
+		String name;
+		int no,sal,n,flag=0;
+		System.out.print("Enter the number of employees : ");
+		n = in.nextInt();
+		employee obj[] = new employee[10];
+		for(int i = 0;i < n;i++){
+			System.out.print("Enter the employee id : ");
+			no = in.nextInt();
+			in.nextLine();
+			System.out.print("Enter the employee name : ");
+			name = in.nextLine();
+			System.out.print("Enter the employee salary : ");
+			sal = in.nextInt();
+			obj[i] = new employee(no,name,sal);
+		}
+		System.out.print("Enter the employee id to search an employee- ");
+		System.out.print("Enter the employee id : ");
+		no = in.nextInt();
 		for(int i=0;i<n;i++){
-			System.out.println("Employee"+i+1);
-			System.out.println("Enter the Employee name");
-			String b=s.nextLine();
-			System.out.println("Enter the Employee number");
-			int a=s.nextInt();
-			System.out.println("Enter the Employee Salary");
-			int c=s.nextInt();
-			s.nextLine();
-			emp[i]=new Employee(a,b,c);
-		} 
-		
-		System.out.println("Enter the Employee number to search");	
-		int q=s.nextInt();
-		int flag=0;
-		for(int i=0;i<n;i++){
-			if(emp[i].eno==q){
-					flag=1;
-					System.out.println("Employee number="+emp[i].eno);
-					System.out.println("Employee name="+emp[i].ename);
-					System.out.println("Employee Salary="+emp[i].esalary);
+			if(obj[i].eno == no){
+				System.out.println("Employee id : "+ obj[i].eno);
+				System.out.println("Employee name : "+ obj[i].eName);
+				System.out.println("Employee salary : "+ obj[i].eSalary);
+				flag=1;
 			}
 		}
-		if(flag==0){
-			System.out.println("No such employee");
+		if(flag == 0){
+			System.out.println("Employee not available");
 		}
 	}
 }
